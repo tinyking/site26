@@ -1,0 +1,23 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import JournalDetailPage from '@/components/gallery/JournalDetailPage';
+
+const { slug } = Astro.params;
+
+export function getStaticPaths() {
+  const slugs = [
+    'golden-hour-photography',
+    'day-in-the-life',
+    'everyday-moments',
+    'minimalist-composition',
+  ];
+  
+  return slugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+---
+
+<MainLayout title="Journal - MonoGlass Gallery">
+  <JournalDetailPage slug={slug} client:load />
+</MainLayout>

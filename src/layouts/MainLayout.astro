@@ -1,0 +1,32 @@
+---
+import '@/assets/styles/globals.css';
+import Header from '@/components/gallery/Header';
+import Footer from '@/components/gallery/Footer';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "MonoGlass Gallery", description = "Premium photography portfolio" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body class="min-h-screen bg-gradient-monoglass noise-overlay">
+  <Header client:load />
+  
+  <main class="pt-24 pb-16">
+    <slot />
+  </main>
+  
+  <Footer />
+</body>
+</html>
