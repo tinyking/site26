@@ -1,23 +1,21 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro';
 import JournalDetailPage from '@/components/gallery/JournalDetailPage';
+import { getCollection, getEntry } from 'astro:content';
 
 const { slug } = Astro.params;
+const entry = await getEntry('journal', slug!);
+const post = entry?.data;
 
-export function getStaticPaths() {
-  const slugs = [
-    'golden-hour-photography',
-    'day-in-the-life',
-    'everyday-moments',
-    'minimalist-composition',
-  ];
+export async function getStaticPaths() {
+  const entries = await getCollection('journal');
   
-  return slugs.map((slug) => ({
-    params: { slug },
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
   }));
 }
 ---
 
 <MainLayout title="Journal - Jianchao Wang">
-  <JournalDetailPage slug={slug} client:load />
+  <JournalDetailPage post={post} content={await entry?.render()} client:load />
 </MainLayout>

@@ -1,8 +1,11 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro';
 import JournalPage from '@/components/gallery/JournalPage';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('journal');
 ---
 
 <MainLayout title="Journal - Jianchao Wang">
-  <JournalPage client:load />
+  <JournalPage posts={posts} client:load />
 </MainLayout>
