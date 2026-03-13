@@ -30,7 +30,7 @@ export default function HomePage() {
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="heading-xl text-foreground mb-6">
-            MonoGlass
+            Jianchao Wang
           </h1>
           <p className="body-lg text-muted-foreground mb-8">
             A premium photography portfolio showcasing the art of visual storytelling.

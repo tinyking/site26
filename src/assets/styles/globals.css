@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================
-   MonoGlass Gallery - Custom Theme Tokens
+   Jianchao Wang - Custom Theme Tokens
    Style: Cream White + Glassmorphism + Warm Gray
    ============================================ */
 
@@ -11,7 +11,7 @@
   /* Base Radius */
   --radius: 0.75rem;
   
-  /* MonoGlass Light Theme Colors */
+  /* Jianchao Wang Light Theme Colors */
   --background: #FAF9F6; /* Warm off-white */
   --foreground: #2C2C2C; /* Warm dark gray */
   
@@ -86,7 +86,7 @@
 }
 
 /* ============================================
-   MonoGlass Utility Classes
+   Jianchao Wang Utility Classes
    ============================================ */
 
 @layer utilities {
@@ -366,7 +366,7 @@
 }
 
 /* ============================================
-   Article Content Styles (MonoGlass Theme)
+   Article Content Styles (Jianchao Wang Theme)
    ============================================ */
 
 .article-content {

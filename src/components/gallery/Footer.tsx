@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <a href="/" className="text-lg font-semibold">
-              MonoGlass
+              Jianchao Wang
             </a>
           </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} MonoGlass. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Jianchao Wang. All rights reserved.</p>
         </div>
       </div>
     </footer>

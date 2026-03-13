@@ -19,7 +19,7 @@ export default function Header() {
           href="/" 
           className="text-xl sm:text-2xl md:text-3xl font-serif font-normal text-foreground"
         >
-          MonoGlass
+          Jianchao Wang
         </a>
 
         <div className="hidden md:flex items-center gap-8">
